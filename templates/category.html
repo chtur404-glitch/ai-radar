@@ -1,0 +1,46 @@
+<section class="page-head" style="--c: {{ category.accent }}">
+  <div class="wrap">
+    <p class="kicker">CATEGORY</p>
+    <h1 class="page-title">{{ category.name }}</h1>
+    <p class="page-desc">{{ category.desc }}</p>
+    <p class="page-meta"><span class="page-count">{{ category.count }} 篇訊號</span><span class="dot"></span><span class="page-mono">/categories/{{ category.id }}</span></p>
+  </div>
+</section>
+
+{% if articles %}
+<section class="section">
+  <div class="wrap">
+    <div class="card-grid">
+      {% for card in articles %}{% include "_card_grid.html" %}{% endfor %}
+    </div>
+  </div>
+</section>
+{% else %}
+<section class="section">
+  <div class="wrap">
+    <div class="empty-state">
+      <span class="empty-mark" aria-hidden="true"></span>
+      <h2 class="empty-title">雷達還在掃描中</h2>
+      <p class="empty-text">這個分類還沒有文章。當你（或 Agent）在 <code>content/articles/</code> 新增一篇 <code>category: {{ category.id }}</code> 的文章，跑一次建置就會出現在這裡。</p>
+      <a class="btn btn--ghost" href="../index.html">回首頁看看別的</a>
+    </div>
+  </div>
+</section>
+{% endif %}
+
+<section class="section section--tight">
+  <div class="wrap">
+    <header class="section-head section-head--sm">
+      <p class="kicker">ELSEWHERE</p>
+      <h2 class="section-title section-title--sm">其他分類</h2>
+    </header>
+    <div class="tile-grid tile-grid--mini">
+      {% for c in others %}
+      <a class="tile tile--mini" href="{{ c.url }}" style="--c: {{ c.accent }}" data-reveal>
+        <span class="tile-top"><span class="tile-name">{{ c.name }}</span><span class="tile-count">{{ c.count }}</span></span>
+        <span class="tile-desc">{{ c.desc }}</span>
+      </a>
+      {% endfor %}
+    </div>
+  </div>
+</section>

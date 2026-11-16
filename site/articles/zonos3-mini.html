@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>8.86 億參數的語音模型，在手機瀏覽器裡即時複製你的聲音 — AI Radar</title>
+<meta name="description" content="Zyphra 開源的 ZONOS3-Mini 是即時 TTS 模型，幾秒參考音檔就能複製音色，官方自稱瀏覽器內第一段音訊不到 570 毫秒，運算全在裝置上跑。">
+<meta property="og:title" content="8.86 億參數的語音模型，在手機瀏覽器裡即時複製你的聲音 — AI Radar">
+<meta property="og:description" content="Zyphra 開源的 ZONOS3-Mini 是即時 TTS 模型，幾秒參考音檔就能複製音色，官方自稱瀏覽器內第一段音訊不到 570 毫秒，運算全在裝置上跑。">
+<meta property="og:type" content="article">
+<meta property="og:image" content="../assets/covers/zonos3-mini.svg">
+<meta name="theme-color" content="#06070a">
+<link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Noto+Sans+TC:wght@400;500;700&display=swap">
+<link rel="stylesheet" href="../assets/css/base.css">
+<link rel="stylesheet" href="../assets/css/components.css">
+<link rel="stylesheet" href="../assets/css/pages.css">
+</head>
+<body>
+<a class="skip-link" href="#main">跳到主要內容</a>
+
+<header class="site-header" data-header>
+  <div class="wrap header-inner">
+    <a class="brand" href="../index.html" aria-label="AI Radar 首頁">
+      <span class="brand-mark" aria-hidden="true">
+        <svg viewBox="0 0 32 32" width="32" height="32" fill="none">
+          <circle cx="16" cy="16" r="14" stroke="currentColor" stroke-opacity=".35"/>
+          <circle cx="16" cy="16" r="8.5" stroke="currentColor" stroke-opacity=".22"/>
+          <path d="M16 16 L28.5 9" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+          <circle cx="16" cy="16" r="2.2" fill="currentColor"/>
+          <circle cx="22.5" cy="12" r="1.7" fill="currentColor" fill-opacity=".75"/>
+        </svg>
+      </span>
+      <span class="brand-text">AI <em>Radar</em></span>
+    </a>
+    <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="site-nav" aria-label="開啟導覽選單">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="site-nav" id="site-nav" data-nav aria-label="主要導覽">
+      <a class="nav-link" href="../index.html">首頁</a><a class="nav-link" href="../index.html#featured">精選</a><a class="nav-link" href="../index.html#latest">最新發現</a><a class="nav-link" href="../index.html#categories">分類</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+<article class="article" style="--c: #4fe3c1">
+  <nav class="breadcrumb" aria-label="路徑">
+    <div class="wrap crumb-inner">
+      <a href="../index.html">首頁</a><span class="crumb-sep">/</span><a href="../categories/audio.html">語音與音樂</a><span class="crumb-sep">/</span><span class="crumb-current">8.86 億參數的語音模型，在手機瀏覽器裡即時複製你的聲音</span>
+    </div>
+  </nav>
+
+  <header class="article-head">
+    <div class="wrap">
+      <p class="kicker"><a class="chip chip--cat" href="../categories/audio.html">語音與音樂</a></p>
+      <h1 class="article-title">8.86 億參數的語音模型，在手機瀏覽器裡即時複製你的聲音</h1>
+      <p class="article-lead">Zyphra 開源的 ZONOS3-Mini 是即時 TTS 模型，幾秒參考音檔就能複製音色，官方自稱瀏覽器內第一段音訊不到 570 毫秒，運算全在裝置上跑。</p>
+      <p class="article-meta">
+        <time datetime="2026-11-16">2026 年 11 月 16 日</time>
+        
+        <span class="dot"></span><span>1 分鐘閱讀</span>
+      </p>
+      
+      <ul class="tag-row"><li class="tag">語音合成</li><li class="tag">聲音複製</li><li class="tag">邊緣運算</li></ul>
+      
+    </div>
+  </header>
+
+  <figure class="article-cover">
+    <img src="../assets/covers/zonos3-mini.svg" alt="" width="1200" height="750">
+  </figure>
+
+  <div class="wrap article-layout">
+    <div class="article-main">
+      
+      <section class="block block--highlights">
+        <h2 class="block-title">重點速覽</h2>
+        <ol class="highlights">
+          <li class="hi"><span class="hi-index">1</span><span class="hi-text">稀疏專家網路，總參數 8.86 億、每次只啟用約 1 億</span></li><li class="hi"><span class="hi-index">2</span><span class="hi-text">自製的語音編碼器把音訊壓成每秒 15 格</span></li><li class="hi"><span class="hi-index">3</span><span class="hi-text">自家評測報出 6.71% 錯誤率，尚無獨立複現</span></li><li class="hi"><span class="hi-index">4</span><span class="hi-text">只用兩天半、112 張 H100 就訓練完成，權重開源</span></li>
+        </ol>
+      </section>
+      
+
+      <div class="prose"><p>給它幾秒鐘的錄音，它就能用那個聲音說話，而且整段運算留在你自己的裝置上。Zyphra 在 2026 年 11 月 9 日釋出的 ZONOS3-Mini，是零樣本聲音複製的即時 TTS 模型，官方自稱在 Pixel 9 的手機瀏覽器裡，第一段音訊不到 570 毫秒就出來。</p><h3>打開網頁就能玩</h3><p>Zyphra 的網頁 playground 是門檻最低的入口：第一次進站下載模型，之後瀏覽器會快取，運算全部透過 WebGPU 在你自己的 GPU 上跑，不用安裝也不用伺服器（<code>zyphra.com/zonos3-mini/localplayground/lite</code>）。除了複製聲音，它內建 27 個預設聲音，能調年齡、口音、情緒與語速。要接進自己的服務，可用 SGLang-Omni 起一個 OpenAI 相容的 <code>/v1/audio/speech</code> 端點，串流吐出 44.1kHz 音訊。</p><h3>為什麼這麼小還能這麼快</h3><p>它是 11 層語言模型混用 gated DeltaNet 與全域注意力，加上 latent MoE，總參數 886M、每個 token 只啟用 100M（技術報告的數字，官方部落格寫 800M）。另一個關鍵是自製的 ZAC-1 codec：把 44.1kHz 音訊壓成 15Hz 的 frame，序列長度只有前一代 86Hz codec 的 1/5.7。官方說這顆模型只用 112 張 H100 訓練 2.5 天。</p><h3>數字要看是誰說的</h3><p>官方在自家 ZTTS2-Eval（55 個語言集，35 clean、20 in the wild）報出 macro WER 6.71%，並稱在開源模型中排第一；自家設計的 benchmark、自報數據，沒有獨立複現。延遲數字自家也有出入：部落格寫瀏覽器內不到 570 毫秒與 150 毫秒，同一份技術報告的 WebGPU 段落卻寫低於 800 與 450 毫秒。伺服器端官方自稱單張 H100 上單請求 85 毫秒出聲、8 個並行時中位數 80 毫秒，並說 64 個並行時峰值吞吐達 457 倍即時。</p><h3>已經有人真的跑起來</h3><p>有人用 4 核心、沒有 GPU 的 Linux VM 跑起 C++/ggml 版本；另一份在雲端 VM 的實測量到英文約 2.0 至 2.3 倍即時、複製 13 秒參考音檔約 1.5 倍即時。官方也釋出 MLX、WebGPU、CUDA 與 ggml 版本，量化檔從 0.66GB 到 1.03GB；配音可以完全離線，不必付雲端 API 的錢。</p><h3>還沒被驗證的地方</h3><p>模型卡說支援 43 種語言，playground 選單只列 10 種（官方回覆：任何語言的文字都能用預設聲音念）。音質沒有獨立評測，單人實測心得也顯示不同語言落差明顯。發布資料沒提到水印或濫用防護——幾秒音檔就能複製音色，用別人的聲音前先取得同意。</p></div>
+
+      
+      <section class="block block--extend">
+        <h2 class="block-title">延伸潛力</h2>
+        <ul class="extend-list"><li>接進手機語音助理，回覆不必等雲端往返，斷線也能講話（推測）。</li><li>遊戲與有聲書可用同一顆模型替每個角色配音，離線批次生成（推測）。</li><li>配上本地 LLM，能做成聲音完全不出裝置的對話小硬體（推測）。</li></ul>
+        <p class="aside-note">延伸運用是合理外推，不是官方公告的功能。</p>
+      </section>
+      
+
+      
+      <section class="block block--sources">
+        <h2 class="block-title">原始來源</h2>
+        <ul class="source-list">
+          <li><a href="https://www.zyphra.com/our-work/zonos3-mini/" target="_blank" rel="noopener"><span class="src-label">Zyphra 官方發表頁（2026-11-09）</span><span class="src-host">zyphra.com</span></a></li><li><a href="https://huggingface.co/blog/Zyphra/zonos3-mini" target="_blank" rel="noopener"><span class="src-label">Zyphra 官方技術部落格（Hugging Face，2026-11-11）</span><span class="src-host">huggingface.co</span></a></li><li><a href="https://arxiv.org/abs/2611.16525" target="_blank" rel="noopener"><span class="src-label">ZONOS3-Mini Technical Report（arXiv:2611.16525）</span><span class="src-host">arxiv.org</span></a></li><li><a href="https://github.com/Zyphra/ZONOS3-Mini" target="_blank" rel="noopener"><span class="src-label">官方 GitHub repo（推論伺服器與程式碼）</span><span class="src-host">github.com</span></a></li><li><a href="https://huggingface.co/Zyphra/ZONOS3-Mini" target="_blank" rel="noopener"><span class="src-label">Hugging Face 模型卡與預設聲音清單</span><span class="src-host">huggingface.co</span></a></li><li><a href="https://aifrontierpost.com/articles/zonos3-mini-voice-cloning-tts-tutorial/" target="_blank" rel="noopener"><span class="src-label">第三方實測：無 GPU 的 4 核心 Linux VM 跑 C++/ggml 版</span><span class="src-host">aifrontierpost.com</span></a></li><li><a href="https://webdiga.com/zonos3-mini-local-tts/" target="_blank" rel="noopener"><span class="src-label">第三方實測：雲端 8 vCPU VM 的 CPU 計時（2026-11-12）</span><span class="src-host">webdiga.com</span></a></li>
+        </ul>
+      </section>
+      
+    </div>
+
+    <aside class="article-side">
+      <div class="panel panel--tool">
+        <p class="panel-kicker">TOOL</p>
+        <h2 class="tool-name">ZONOS3-Mini</h2>
+        <dl class="tool-facts">
+          <div class="fact"><dt>開發者</dt><dd>Zyphra</dd></div>
+          <div class="fact"><dt>類型</dt><dd>零樣本聲音複製的即時語音合成模型（TTS）</dd></div>
+          <div class="fact"><dt>授權</dt><dd>開源</dd></div>
+          <div class="fact"><dt>費用</dt><dd>模型與權重 Apache 2.0、推論程式 MIT，免費；官方雲端 Zyphra Cloud 另計費</dd></div>
+        </dl>
+        <a class="btn btn--primary btn--block" href="https://zyphra.com/zonos3-mini/localplayground/lite" target="_blank" rel="noopener">前往官方頁面 ↗</a>
+      </div>
+      <div class="panel panel--note">
+        <p class="panel-kicker">NOTE</p>
+        <p class="panel-text">本文數據均標註出處。標示「官方自稱」者尚未有第三方複現，請以官方頁面為準。</p>
+      </div>
+    </aside>
+  </div>
+
+  
+</article>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <div class="footer-brand">
+      <span class="brand-text brand-text--lg">AI <em>Radar</em></span>
+      <p class="footer-tagline">把有趣的 AI 放到你的雷達上</p>
+      <p class="footer-note">本站內容整理自公開來源，所有數據均標註出處。</p>
+    </div>
+    <nav class="footer-col" aria-label="文章分類">
+      <h2 class="footer-head">分類</h2>
+      <ul class="footer-list">
+        <li><a href="../categories/agent.html">AI Agent<span class="footer-count">1</span></a></li><li><a href="../categories/coding.html">程式開發<span class="footer-count">1</span></a></li><li><a href="../categories/image.html">圖像與設計<span class="footer-count">1</span></a></li><li><a href="../categories/video.html">影片生成<span class="footer-count">1</span></a></li><li><a href="../categories/audio.html">語音與音樂<span class="footer-count">1</span></a></li><li><a href="../categories/fun.html">趣味應用與研究<span class="footer-count">1</span></a></li>
+      </ul>
+    </nav>
+    <div class="footer-col">
+      <h2 class="footer-head">關於來源</h2>
+      <p class="footer-text">資訊來源以官方公告、論文與官方文件為主；未經第三方複驗的數字皆標明「官方自稱」。</p>
+    </div>
+  </div>
+  <div class="wrap footer-bottom">
+    <p>© 2026 AI Radar</p>
+    <p class="footer-mono">STATIC SITE · NO FRAMEWORK · PYTHON STDLIB BUILD</p>
+  </div>
+</footer>
+
+<script src="../assets/js/main.js" defer></script>
+</body>
+</html>

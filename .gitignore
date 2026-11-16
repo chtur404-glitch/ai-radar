@@ -1,0 +1,16 @@
+# 作業系統／編輯器雜項
+Thumbs.db
+desktop.ini
+.DS_Store
+.vscode/
+.idea/
+
+# Python 暫存（build.py 已設定 dont_write_bytecode，正常不會產生）
+__pycache__/
+*.pyc
+
+# 備份與實驗檔（本專案規範要求不留這些檔案）
+*.bak
+*.backup
+*_old.*
+*_before_*

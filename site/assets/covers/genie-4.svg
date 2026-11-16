@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" width="1200" height="750" role="img" aria-label="AI Radar 封面圖">
+  <defs>
+    <linearGradient id="gb93249" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#ff7ac6" stop-opacity=".95"/>
+      <stop offset="100%" stop-color="#f2569f" stop-opacity=".55"/>
+    </linearGradient>
+    <radialGradient id="glowb93249" cx="78%" cy="18%" r="72%">
+      <stop offset="0%" stop-color="#ff7ac6" stop-opacity=".38"/>
+      <stop offset="60%" stop-color="#ff7ac6" stop-opacity=".06"/>
+      <stop offset="100%" stop-color="#ff7ac6" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="gridb93249" width="48" height="48" patternUnits="userSpaceOnUse">
+      <path d="M48 0H0v48" fill="none" stroke="#ffffff" stroke-opacity=".045" stroke-width="1"/>
+    </pattern>
+    <linearGradient id="fadeb93249" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#06070a" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#06070a" stop-opacity=".92"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="750" fill="#0b0d13"/>
+  <rect width="1200" height="750" fill="url(#gridb93249)"/>
+  <rect width="1200" height="750" fill="url(#glowb93249)"/>
+<circle cx="640" cy="400" r="70" fill="none" stroke="#ff7ac6" stroke-opacity="0.30"/><circle cx="640" cy="400" r="140" fill="none" stroke="#ff7ac6" stroke-opacity="0.25"/><circle cx="640" cy="400" r="210" fill="none" stroke="#ff7ac6" stroke-opacity="0.21"/><circle cx="640" cy="400" r="280" fill="none" stroke="#ff7ac6" stroke-opacity="0.16"/><circle cx="640" cy="400" r="350" fill="none" stroke="#ff7ac6" stroke-opacity="0.12"/><circle cx="827" cy="368" r="5.7" fill="#ff7ac6" opacity="0.55"/><circle cx="751" cy="583" r="5.0" fill="#ff7ac6" opacity="0.29"/><circle cx="614" cy="200" r="3.4" fill="#ff7ac6" opacity="0.44"/><circle cx="762" cy="571" r="6.5" fill="#ff7ac6" opacity="0.78"/><circle cx="470" cy="534" r="6.8" fill="#ff7ac6" opacity="0.28"/><circle cx="736" cy="297" r="5.1" fill="#ff7ac6" opacity="0.41"/><circle cx="623" cy="342" r="3.9" fill="#ff7ac6" opacity="0.55"/><circle cx="573" cy="215" r="3.0" fill="#ff7ac6" opacity="0.38"/><circle cx="295" cy="443" r="6.9" fill="#ff7ac6" opacity="0.43"/><circle cx="510" cy="197" r="5.4" fill="#ff7ac6" opacity="0.76"/><circle cx="821" cy="617" r="6.3" fill="#ff7ac6" opacity="0.23"/><circle cx="642" cy="294" r="2.4" fill="#ff7ac6" opacity="0.42"/><circle cx="860" cy="431" r="5.8" fill="#ff7ac6" opacity="0.43"/><circle cx="791" cy="537" r="6.7" fill="#ff7ac6" opacity="0.78"/><circle cx="497" cy="400" r="4.8" fill="#ff7ac6" opacity="0.29"/><circle cx="475" cy="480" r="6.6" fill="#ff7ac6" opacity="0.79"/><circle cx="792" cy="460" r="4.1" fill="#ff7ac6" opacity="0.68"/><circle cx="664" cy="346" r="5.1" fill="#ff7ac6" opacity="0.40"/><circle cx="988" cy="445" r="2.9" fill="#ff7ac6" opacity="0.61"/><circle cx="754" cy="521" r="6.2" fill="#ff7ac6" opacity="0.70"/><circle cx="909" cy="427" r="3.2" fill="#ff7ac6" opacity="0.55"/><circle cx="602" cy="248" r="3.1" fill="#ff7ac6" opacity="0.40"/><circle cx="525" cy="407" r="6.8" fill="#ff7ac6" opacity="0.65"/><circle cx="744" cy="566" r="4.6" fill="#ff7ac6" opacity="0.37"/><circle cx="772" cy="235" r="5.1" fill="#ff7ac6" opacity="0.28"/><circle cx="689" cy="291" r="4.4" fill="#ff7ac6" opacity="0.27"/><circle cx="640" cy="400" r="46" fill="url(#gb93249)" opacity=".9"/><ellipse cx="640" cy="400" rx="330" ry="205" fill="none" stroke="#f2569f" stroke-opacity=".3" transform="rotate(-14 640 400)"/>
+  <rect width="1200" height="750" fill="url(#fadeb93249)" opacity=".55"/>
+  <g font-family="JetBrains Mono, ui-monospace, Consolas, monospace" font-size="20" letter-spacing="4">
+    <text x="90" y="672" fill="#ff7ac6" opacity=".92">WORLD MODEL</text>
+    <text x="1110" y="672" fill="#ffffff" opacity=".34" text-anchor="end">AI RADAR</text>
+  </g>
+  <rect x="90" y="694" width="150" height="3" rx="1.5" fill="#ff7ac6" opacity=".8"/>
+</svg>

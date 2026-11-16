@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MCP Apps 上線：工具回傳的不再只是文字，而是可以操作的介面 — AI Radar</title>
+<meta name="description" content="MCP 的第一個官方 extension：工具回傳的不只是文字，而是能在對話裡直接操作的互動介面，Claude 已用它把 Asana、Figma、Canva 開進聊天室。">
+<meta property="og:title" content="MCP Apps 上線：工具回傳的不再只是文字，而是可以操作的介面 — AI Radar">
+<meta property="og:description" content="MCP 的第一個官方 extension：工具回傳的不只是文字，而是能在對話裡直接操作的互動介面，Claude 已用它把 Asana、Figma、Canva 開進聊天室。">
+<meta property="og:type" content="article">
+<meta property="og:image" content="../assets/covers/mcp-apps.svg">
+<meta name="theme-color" content="#06070a">
+<link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Noto+Sans+TC:wght@400;500;700&display=swap">
+<link rel="stylesheet" href="../assets/css/base.css">
+<link rel="stylesheet" href="../assets/css/components.css">
+<link rel="stylesheet" href="../assets/css/pages.css">
+</head>
+<body>
+<a class="skip-link" href="#main">跳到主要內容</a>
+
+<header class="site-header" data-header>
+  <div class="wrap header-inner">
+    <a class="brand" href="../index.html" aria-label="AI Radar 首頁">
+      <span class="brand-mark" aria-hidden="true">
+        <svg viewBox="0 0 32 32" width="32" height="32" fill="none">
+          <circle cx="16" cy="16" r="14" stroke="currentColor" stroke-opacity=".35"/>
+          <circle cx="16" cy="16" r="8.5" stroke="currentColor" stroke-opacity=".22"/>
+          <path d="M16 16 L28.5 9" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+          <circle cx="16" cy="16" r="2.2" fill="currentColor"/>
+          <circle cx="22.5" cy="12" r="1.7" fill="currentColor" fill-opacity=".75"/>
+        </svg>
+      </span>
+      <span class="brand-text">AI <em>Radar</em></span>
+    </a>
+    <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="site-nav" aria-label="開啟導覽選單">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="site-nav" id="site-nav" data-nav aria-label="主要導覽">
+      <a class="nav-link" href="../index.html">首頁</a><a class="nav-link" href="../index.html#featured">精選</a><a class="nav-link" href="../index.html#latest">最新發現</a><a class="nav-link" href="../index.html#categories">分類</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+<article class="article" style="--c: #7d8bff">
+  <nav class="breadcrumb" aria-label="路徑">
+    <div class="wrap crumb-inner">
+      <a href="../index.html">首頁</a><span class="crumb-sep">/</span><a href="../categories/agent.html">AI Agent</a><span class="crumb-sep">/</span><span class="crumb-current">MCP Apps 上線：工具回傳的不再只是文字，而是可以操作的介面</span>
+    </div>
+  </nav>
+
+  <header class="article-head">
+    <div class="wrap">
+      <p class="kicker"><a class="chip chip--cat" href="../categories/agent.html">AI Agent</a></p>
+      <h1 class="article-title">MCP Apps 上線：工具回傳的不再只是文字，而是可以操作的介面</h1>
+      <p class="article-lead">MCP 的第一個官方 extension：工具回傳的不只是文字，而是能在對話裡直接操作的互動介面，Claude 已用它把 Asana、Figma、Canva 開進聊天室。</p>
+      <p class="article-meta">
+        <time datetime="2026-11-16">2026 年 11 月 16 日</time>
+        
+        <span class="dot"></span><span>2 分鐘閱讀</span>
+      </p>
+      
+      <ul class="tag-row"><li class="tag">MCP</li><li class="tag">互動介面</li><li class="tag">工具整合</li></ul>
+      
+    </div>
+  </header>
+
+  <figure class="article-cover">
+    <img src="../assets/covers/mcp-apps.svg" alt="" width="1200" height="750">
+  </figure>
+
+  <div class="wrap article-layout">
+    <div class="article-main">
+      
+      <section class="block block--highlights">
+        <h2 class="block-title">重點速覽</h2>
+        <ol class="highlights">
+          <li class="hi"><span class="hi-index">1</span><span class="hi-text">工具宣告一個 ui:// 資源，就能把互動 HTML 回傳到對話裡</span></li><li class="hi"><span class="hi-index">2</span><span class="hi-text">Claude 直接用它把 Asana、Figma、Canva 開進聊天室動手改</span></li><li class="hi"><span class="hi-index">3</span><span class="hi-text">上線當天就有 Claude、Goose、VS Code、ChatGPT 等 client 宣布支援</span></li><li class="hi"><span class="hi-index">4</span><span class="hi-text">官方 repo 附四個 Agent Skills，讓 coding agent 直接幫你造 UI</span></li>
+        </ol>
+      </section>
+      
+
+      <div class="prose"><p>MCP Apps 是 Model Context Protocol 的第一個官方 extension，2026 年 1 月 26 日正式上線。從前 MCP 工具只能回傳文字與結構化資料；現在工具可以在自己的定義裡掛一個 <code>ui://</code> 資源，host 把它抓下來、塞進沙箱 iframe 渲染，你就在對話裡直接操作那個介面。</p><h3>它到底能做什麼</h3><p>作法是把 MCP 原本就有的兩個元件接起來：一個帶 <code>_meta.ui.resourceUri</code> 的工具，加一份用 <code>ui://</code> 提供的 UI 資源（目前支援的格式是 <code>text/html;profile=mcp-app</code>）。渲染之後，UI 與 host 之間用 JSON-RPC over postMessage 雙向溝通——UI 可以呼叫 server 上的其他工具，host 也能把新資料推回去，所以圖表能在對話裡被篩選、鑽取，而不是只回你一張靜態圖。</p><p>這個規格是 SEP-1865，2025 年 11 月由 MCP-UI 開發者與 OpenAI、Anthropic 的 maintainer 一起提案。上線當天 VS Code 就在 Insiders 推出支援，官方自稱是第一個完整支援 MCP Apps 的 AI 編輯器；MCP 官方部落格則把 Claude、Goose、Visual Studio Code、ChatGPT 都列進支援名單。</p><h3>為什麼值得注意</h3><p>Anthropic 在 Claude 上把它做成看得見的東西：interactive connectors。Asana、Slack、Figma、Canva、Box、Hex 這些工具會開在對話旁邊，你可以自己動手，也可以叫 Claude 動手。2026 年 11 月 10 日再進一步，Asana、Canva、Carta、Dropbox、monday.com、Smartsheet、Vercel、Webflow 可以把完整工具開在側邊或全螢幕，登入你自己的帳號，Claude 能改你正在看的那一頁、那一列、那個檔案，改動即時出現，你按核准。Anthropic 官方說這是靠 MCP Apps 的 app tools 與 embedded sites，開發者端目前是 public preview。</p><p>安全模型官方列了四層：iframe sandbox、host 可以在渲染前檢視 HTML、UI 到 host 的所有訊息都是可稽核的 JSON-RPC、UI 發起的工具呼叫可以由 host 要求使用者同意。</p><h3>實際可以怎麼用</h3><p>SDK 是 npm 上的 <code>@modelcontextprotocol/ext-apps</code>，官方 repo 另外附了四個 Agent Skills：<code>create-mcp-app</code> 從零長出互動 UI、<code>add-app-to-server</code> 替既有 MCP server 的工具加介面、<code>migrate-oai-app</code> 把 OpenAI App 搬過來、<code>convert-web-app</code> 把現成網頁變成 hybrid。在 Claude Code 裡一行 <code>/plugin marketplace add modelcontextprotocol/ext-apps</code> 就能裝，或改用 <code>npx skills add modelcontextprotocol/ext-apps</code>。</p><h3>還沒被驗證的地方</h3><p>安全模型裡有兩條寫的是「host 可以」而不是「host 必須」——檢視 HTML 與要求使用者同意都是 client 的選擇，官方公告並沒有保證每個 client 都做。同一篇也提到，app 可以「安靜地更新模型的 context 供後續使用」，而要不要把這件事顯示給你看，規範沒寫。要連別人的 MCP server 之前，官方自己的建議仍然是：自己查清楚。</p></div>
+
+      
+      <section class="block block--extend">
+        <h2 class="block-title">延伸潛力</h2>
+        <ul class="extend-list"><li>同一份 MCP App 可跨 client 執行，工具介面變成可攜格式（推測）</li><li>企業內部工具寫一次 UI，就長在員工每天開的 AI 助理裡（推測）</li><li>儀表板、審稿與設定精靈搬進對話，可能改變 SaaS 的入口（推測）</li></ul>
+        <p class="aside-note">延伸運用是合理外推，不是官方公告的功能。</p>
+      </section>
+      
+
+      
+      <section class="block block--sources">
+        <h2 class="block-title">原始來源</h2>
+        <ul class="source-list">
+          <li><a href="https://blog.modelcontextprotocol.io/posts/2026-01-26-mcp-apps/" target="_blank" rel="noopener"><span class="src-label">MCP 官方部落格：MCP Apps 正式上線（2026-01-26）</span><span class="src-host">blog.modelcontextprotocol.io</span></a></li><li><a href="https://modelcontextprotocol.io/extensions/apps/overview" target="_blank" rel="noopener"><span class="src-label">MCP 官方文件：MCP Apps 概觀</span><span class="src-host">modelcontextprotocol.io</span></a></li><li><a href="https://apps.extensions.modelcontextprotocol.io/api/documents/agent-skills.html" target="_blank" rel="noopener"><span class="src-label">MCP 官方文件：MCP Apps 的 Agent Skills</span><span class="src-host">apps.extensions.modelcontextprotocol.io</span></a></li><li><a href="https://claude.com/resources/articles/interactive-tools-in-claude" target="_blank" rel="noopener"><span class="src-label">Anthropic 官方文章：Interactive connectors and MCP Apps</span><span class="src-host">claude.com</span></a></li><li><a href="https://claude.com/resources/articles/interactive-connectors-full-tool" target="_blank" rel="noopener"><span class="src-label">Anthropic 官方文章：Open your apps in Claude and work in them together（2026-11-10）</span><span class="src-host">claude.com</span></a></li><li><a href="https://code.visualstudio.com/blogs/2026/01/26/mcp-apps-support" target="_blank" rel="noopener"><span class="src-label">VS Code 官方部落格：MCP Apps support in VS Code（2026-01-26）</span><span class="src-host">code.visualstudio.com</span></a></li><li><a href="https://modelcontextprotocol.io/seps/1865-mcp-apps-interactive-user-interfaces-for-mcp" target="_blank" rel="noopener"><span class="src-label">MCP SEP-1865：MCP Apps 互動使用者介面</span><span class="src-host">modelcontextprotocol.io</span></a></li>
+        </ul>
+      </section>
+      
+    </div>
+
+    <aside class="article-side">
+      <div class="panel panel--tool">
+        <p class="panel-kicker">TOOL</p>
+        <h2 class="tool-name">MCP Apps</h2>
+        <dl class="tool-facts">
+          <div class="fact"><dt>開發者</dt><dd>Model Context Protocol 官方（社群維護）</dd></div>
+          <div class="fact"><dt>類型</dt><dd>MCP 官方 extension：互動 UI 規格與 SDK</dd></div>
+          <div class="fact"><dt>授權</dt><dd>開源</dd></div>
+          <div class="fact"><dt>費用</dt><dd>規格與 SDK 開源免費；Claude 端的 interactive connectors 依方案提供</dd></div>
+        </dl>
+        <a class="btn btn--primary btn--block" href="https://modelcontextprotocol.io/extensions/apps/overview" target="_blank" rel="noopener">前往官方頁面 ↗</a>
+      </div>
+      <div class="panel panel--note">
+        <p class="panel-kicker">NOTE</p>
+        <p class="panel-text">本文數據均標註出處。標示「官方自稱」者尚未有第三方複現，請以官方頁面為準。</p>
+      </div>
+    </aside>
+  </div>
+
+  
+</article>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <div class="footer-brand">
+      <span class="brand-text brand-text--lg">AI <em>Radar</em></span>
+      <p class="footer-tagline">把有趣的 AI 放到你的雷達上</p>
+      <p class="footer-note">本站內容整理自公開來源，所有數據均標註出處。</p>
+    </div>
+    <nav class="footer-col" aria-label="文章分類">
+      <h2 class="footer-head">分類</h2>
+      <ul class="footer-list">
+        <li><a href="../categories/agent.html">AI Agent<span class="footer-count">1</span></a></li><li><a href="../categories/coding.html">程式開發<span class="footer-count">1</span></a></li><li><a href="../categories/image.html">圖像與設計<span class="footer-count">1</span></a></li><li><a href="../categories/video.html">影片生成<span class="footer-count">1</span></a></li><li><a href="../categories/audio.html">語音與音樂<span class="footer-count">1</span></a></li><li><a href="../categories/fun.html">趣味應用與研究<span class="footer-count">1</span></a></li>
+      </ul>
+    </nav>
+    <div class="footer-col">
+      <h2 class="footer-head">關於來源</h2>
+      <p class="footer-text">資訊來源以官方公告、論文與官方文件為主；未經第三方複驗的數字皆標明「官方自稱」。</p>
+    </div>
+  </div>
+  <div class="wrap footer-bottom">
+    <p>© 2026 AI Radar</p>
+    <p class="footer-mono">STATIC SITE · NO FRAMEWORK · PYTHON STDLIB BUILD</p>
+  </div>
+</footer>
+
+<script src="../assets/js/main.js" defer></script>
+</body>
+</html>

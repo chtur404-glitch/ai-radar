@@ -1,0 +1,11 @@
+<article class="card card--feature" data-reveal style="--c: {{ card.accent }}">
+  <a class="card-media" href="{{ card.url }}" tabindex="-1" aria-hidden="true">
+    <img src="{{ card.cover }}" alt="" width="1200" height="750" loading="lazy">
+  </a>
+  <div class="card-body">
+    <p class="card-eyebrow"><a class="chip chip--cat" href="{{ card.category_url }}">{{ card.category_name }}</a><span class="chip-sep">／</span><span class="chip-src">{{ card.tool_name }}</span></p>
+    <h3 class="card-title card-title--xl"><a href="{{ card.url }}">{{ card.title }}</a></h3>
+    <p class="card-summary">{{ card.summary }}</p>
+    <p class="card-meta"><time datetime="{{ card.date_iso }}">{{ card.date }}</time><span class="dot"></span><span>{{ card.reading_time }} 分鐘閱讀</span><span class="dot"></span><span>{{ card.open_source_label }}</span></p>
+  </div>
+</article>

@@ -1,0 +1,45 @@
+# 每次 push 到 main 時：跑 tools/build.py 產生 site/，再發佈到 GitHub Pages。
+# 不需要 npm、不需要任何第三方套件，Python 標準函式庫就夠。
+# 啟用方式：repo → Settings → Pages → Source 選「GitHub Actions」，然後 push 一次即可。
+name: Build & Deploy AI Radar
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: 建置網站（content/ + templates/ + static/ → site/）
+        run: python tools/build.py
+      - name: 檢查文章來源連結（僅報告，不阻擋發佈）
+        run: python tools/check_links.py || true
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" width="1200" height="750" role="img" aria-label="AI Radar 封面圖">
+  <defs>
+    <linearGradient id="g2aeca4" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#7d8bff" stop-opacity=".95"/>
+      <stop offset="100%" stop-color="#5b6cff" stop-opacity=".55"/>
+    </linearGradient>
+    <radialGradient id="glow2aeca4" cx="78%" cy="18%" r="72%">
+      <stop offset="0%" stop-color="#7d8bff" stop-opacity=".38"/>
+      <stop offset="60%" stop-color="#7d8bff" stop-opacity=".06"/>
+      <stop offset="100%" stop-color="#7d8bff" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="grid2aeca4" width="48" height="48" patternUnits="userSpaceOnUse">
+      <path d="M48 0H0v48" fill="none" stroke="#ffffff" stroke-opacity=".045" stroke-width="1"/>
+    </pattern>
+    <linearGradient id="fade2aeca4" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#06070a" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#06070a" stop-opacity=".92"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="750" fill="#0b0d13"/>
+  <rect width="1200" height="750" fill="url(#grid2aeca4)"/>
+  <rect width="1200" height="750" fill="url(#glow2aeca4)"/>
+<path d="M180 250 C 400 210, 400 340, 620 300" fill="none" stroke="#7d8bff" stroke-opacity=".34" stroke-width="1.6"/><path d="M400 180 C 630 140, 630 240, 860 200" fill="none" stroke="#7d8bff" stroke-opacity=".34" stroke-width="1.6"/><path d="M620 300 C 815 260, 815 400, 1010 360" fill="none" stroke="#7d8bff" stroke-opacity=".34" stroke-width="1.6"/><path d="M860 200 C 595 160, 595 510, 330 470" fill="none" stroke="#7d8bff" stroke-opacity=".34" stroke-width="1.6"/><path d="M1010 360 C 855 320, 855 560, 700 520" fill="none" stroke="#7d8bff" stroke-opacity=".34" stroke-width="1.6"/><path d="M330 470 C 630 430, 630 600, 930 560" fill="none" stroke="#7d8bff" stroke-opacity=".34" stroke-width="1.6"/><circle cx="180" cy="250" r="21" fill="#7d8bff" opacity="0.10" stroke="#7d8bff" stroke-opacity="0.35"/><circle cx="400" cy="180" r="23" fill="#7d8bff" opacity="0.10" stroke="#7d8bff" stroke-opacity="0.35"/><circle cx="620" cy="300" r="34" fill="#7d8bff" opacity="0.75" stroke="#7d8bff" stroke-opacity="0.80"/><circle cx="620" cy="300" r="60" fill="none" stroke="#5b6cff" stroke-opacity=".45"/><circle cx="860" cy="200" r="20" fill="#7d8bff" opacity="0.10" stroke="#7d8bff" stroke-opacity="0.35"/><circle cx="1010" cy="360" r="21" fill="#7d8bff" opacity="0.10" stroke="#7d8bff" stroke-opacity="0.35"/><circle cx="330" cy="470" r="19" fill="#7d8bff" opacity="0.10" stroke="#7d8bff" stroke-opacity="0.35"/><circle cx="700" cy="520" r="17" fill="#7d8bff" opacity="0.10" stroke="#7d8bff" stroke-opacity="0.35"/><circle cx="930" cy="560" r="16" fill="#7d8bff" opacity="0.10" stroke="#7d8bff" stroke-opacity="0.35"/>
+  <rect width="1200" height="750" fill="url(#fade2aeca4)" opacity=".55"/>
+  <g font-family="JetBrains Mono, ui-monospace, Consolas, monospace" font-size="20" letter-spacing="4">
+    <text x="90" y="672" fill="#7d8bff" opacity=".92">AI AGENT</text>
+    <text x="1110" y="672" fill="#ffffff" opacity=".34" text-anchor="end">AI RADAR</text>
+  </g>
+  <rect x="90" y="694" width="150" height="3" rx="1.5" fill="#7d8bff" opacity=".8"/>
+</svg>

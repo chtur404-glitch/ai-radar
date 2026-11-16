@@ -1,0 +1,91 @@
+<article class="article" style="--c: {{ article.accent }}">
+  <nav class="breadcrumb" aria-label="路徑">
+    <div class="wrap crumb-inner">
+      <a href="../index.html">首頁</a><span class="crumb-sep">/</span><a href="{{ article.category_url }}">{{ article.category_name }}</a><span class="crumb-sep">/</span><span class="crumb-current">{{ article.title }}</span>
+    </div>
+  </nav>
+
+  <header class="article-head">
+    <div class="wrap">
+      <p class="kicker"><a class="chip chip--cat" href="{{ article.category_url }}">{{ article.category_name }}</a></p>
+      <h1 class="article-title">{{ article.title }}</h1>
+      <p class="article-lead">{{ article.summary }}</p>
+      <p class="article-meta">
+        <time datetime="{{ article.date_iso }}">{{ article.date }}</time>
+        {% if article.updated %}<span class="dot"></span><span>更新於 {{ article.updated }}</span>{% endif %}
+        <span class="dot"></span><span>{{ article.reading_time }} 分鐘閱讀</span>
+      </p>
+      {% if article.tags %}
+      <ul class="tag-row">{% for t in article.tags %}<li class="tag">{{ t.name }}</li>{% endfor %}</ul>
+      {% endif %}
+    </div>
+  </header>
+
+  <figure class="article-cover">
+    <img src="{{ article.cover }}" alt="" width="1200" height="750">
+  </figure>
+
+  <div class="wrap article-layout">
+    <div class="article-main">
+      {% if article.highlights %}
+      <section class="block block--highlights">
+        <h2 class="block-title">重點速覽</h2>
+        <ol class="highlights">
+          {% for h in article.highlights %}<li class="hi"><span class="hi-index">{{ loop.index }}</span><span class="hi-text">{{ h.text }}</span></li>{% endfor %}
+        </ol>
+      </section>
+      {% endif %}
+
+      <div class="prose">{{ article.body|raw }}</div>
+
+      {% if article.extend %}
+      <section class="block block--extend">
+        <h2 class="block-title">延伸潛力</h2>
+        <ul class="extend-list">{% for e in article.extend %}<li>{{ e.text }}</li>{% endfor %}</ul>
+        <p class="aside-note">延伸運用是合理外推，不是官方公告的功能。</p>
+      </section>
+      {% endif %}
+
+      {% if article.sources %}
+      <section class="block block--sources">
+        <h2 class="block-title">原始來源</h2>
+        <ul class="source-list">
+          {% for s in article.sources %}<li><a href="{{ s.url }}" target="_blank" rel="noopener"><span class="src-label">{{ s.label }}</span><span class="src-host">{{ s.host }}</span></a></li>{% endfor %}
+        </ul>
+      </section>
+      {% endif %}
+    </div>
+
+    <aside class="article-side">
+      <div class="panel panel--tool">
+        <p class="panel-kicker">TOOL</p>
+        <h2 class="tool-name">{{ article.tool.name }}</h2>
+        <dl class="tool-facts">
+          {% if article.tool.maker %}<div class="fact"><dt>開發者</dt><dd>{{ article.tool.maker }}</dd></div>{% endif %}
+          {% if article.tool.type %}<div class="fact"><dt>類型</dt><dd>{{ article.tool.type }}</dd></div>{% endif %}
+          <div class="fact"><dt>授權</dt><dd>{{ article.tool.open_source_label }}</dd></div>
+          {% if article.tool.cost %}<div class="fact"><dt>費用</dt><dd>{{ article.tool.cost }}</dd></div>{% endif %}
+        </dl>
+        <a class="btn btn--primary btn--block" href="{{ article.tool.url }}" target="_blank" rel="noopener">前往官方頁面 ↗</a>
+      </div>
+      <div class="panel panel--note">
+        <p class="panel-kicker">NOTE</p>
+        <p class="panel-text">本文數據均標註出處。標示「官方自稱」者尚未有第三方複現，請以官方頁面為準。</p>
+      </div>
+    </aside>
+  </div>
+
+  {% if related %}
+  <section class="section section--tight">
+    <div class="wrap">
+      <header class="section-head section-head--sm">
+        <p class="kicker">RELATED</p>
+        <h2 class="section-title section-title--sm">{{ related_title }}</h2>
+      </header>
+      <div class="card-grid">
+        {% for card in related %}{% include "_card_grid.html" %}{% endfor %}
+      </div>
+    </div>
+  </section>
+  {% endif %}
+</article>

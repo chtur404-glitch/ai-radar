@@ -1,0 +1,45 @@
+site:
+  name: "AI Radar"
+  tagline: "把有趣的 AI 放到你的雷達上"
+  description: "AI Radar 掃描官方部落格、論文、GitHub 與社群，用最短的篇幅告訴你哪些 AI 工具與技術真的有趣、值得親手玩一次。"
+  lang: "zh-Hant"
+  footer_note: "本站內容整理自公開來源，所有數據均標註出處。"
+  sources_note: "資訊來源以官方公告、論文與官方文件為主；未經第三方複驗的數字皆標明「官方自稱」。"
+
+categories:
+  - id: agent
+    name: "AI Agent"
+    desc: "會自己動手做事的模型：工具呼叫、瀏覽器操作、多步任務與協作框架。"
+    accent: "#7d8bff"
+    motif: agent
+    palette: indigo
+  - id: coding
+    name: "程式開發"
+    desc: "寫程式、讀 codebase、跑測試的 AI：coding agent、IDE 整合與模型選擇。"
+    accent: "#7ee787"
+    motif: coding
+    palette: lime
+  - id: image
+    name: "圖像與設計"
+    desc: "生成與編輯圖像、排版與資訊圖表：從文字渲染到設計工作流。"
+    accent: "#ffb35c"
+    motif: image
+    palette: amber
+  - id: video
+    name: "影片生成"
+    desc: "用文字或圖片生成動態影像：速度、品質與可控性的最新進展。"
+    accent: "#c58bff"
+    motif: video
+    palette: violet
+  - id: audio
+    name: "語音與音樂"
+    desc: "聲音複製、即時語音合成、音樂生成與音訊工具。"
+    accent: "#4fe3c1"
+    motif: audio
+    palette: cyan
+  - id: fun
+    name: "趣味應用與研究"
+    desc: "世界模型、遊戲、機器人與那些說不出用途但很想玩的東西。"
+    accent: "#ff7ac6"
+    motif: fun
+    palette: magenta

@@ -1,0 +1,95 @@
+<section class="hero">
+  <div class="hero-glow" aria-hidden="true"></div>
+  <div class="wrap hero-inner">
+    <div class="hero-copy">
+      <p class="kicker">SCANNING · AI SIGNALS TRACKED</p>
+      <h1 class="hero-title">把有趣的 AI<br>放到你的<span class="mark">雷達</span>上</h1>
+      <p class="hero-lead">{{ site.description }}</p>
+      <div class="hero-actions">
+        <a class="btn btn--primary" href="#featured">看精選內容</a>
+        <a class="btn btn--ghost" href="#categories">依分類瀏覽</a>
+      </div>
+      <ul class="hero-stats">
+        <li><span class="stat-num">{{ stats.articles }}</span><span class="stat-label">篇文章</span></li>
+        <li><span class="stat-num">{{ stats.categories }}</span><span class="stat-label">個分類有訊號</span></li>
+        <li><span class="stat-num stat-num--sm">{{ stats.latest }}</span><span class="stat-label">最近更新</span></li>
+      </ul>
+    </div>
+    <div class="radar-stage" aria-hidden="true">
+      <div class="radar">
+        <span class="radar-ring"></span>
+        <span class="radar-ring"></span>
+        <span class="radar-ring"></span>
+        <span class="radar-axis"></span>
+        <span class="radar-sweep"></span>
+        <span class="radar-blip" style="--x:31%;--y:38%;--delay:.2s"></span>
+        <span class="radar-blip" style="--x:63%;--y:26%;--delay:1.1s"></span>
+        <span class="radar-blip" style="--x:44%;--y:66%;--delay:2s"></span>
+        <span class="radar-blip" style="--x:72%;--y:57%;--delay:2.7s"></span>
+        <span class="radar-core"></span>
+      </div>
+      <p class="radar-caption">LIVE · {{ stats.articles }} SIGNALS · NO NOISE</p>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="featured">
+  <div class="wrap">
+    <header class="section-head">
+      <p class="kicker">FEATURED</p>
+      <h2 class="section-title">精選內容</h2>
+      <p class="section-desc">如果只打算看幾篇，就從這裡開始。</p>
+    </header>
+    {% if card %}
+    <div class="featured-grid">
+      {% include "_card_feature.html" %}
+      {% if featured_side %}
+      <div class="featured-side">
+        {% for card in featured_side %}{% include "_card_row.html" %}{% endfor %}
+      </div>
+      {% endif %}
+    </div>
+    {% else %}
+    <p class="empty-inline">還沒有標記為精選的文章（在 frontmatter 加上 featured: true）。</p>
+    {% endif %}
+  </div>
+</section>
+
+<section class="section" id="latest">
+  <div class="wrap">
+    <header class="section-head">
+      <p class="kicker">LATEST</p>
+      <h2 class="section-title">最新發現</h2>
+      <p class="section-desc">照時間排，越上面越新。</p>
+    </header>
+    {% if latest %}
+    <div class="card-grid">
+      {% for card in latest %}{% include "_card_grid.html" %}{% endfor %}
+    </div>
+    {% else %}
+    <p class="empty-inline">目前沒有其他文章。</p>
+    {% endif %}
+  </div>
+</section>
+
+<section class="section" id="categories">
+  <div class="wrap">
+    <header class="section-head">
+      <p class="kicker">CATEGORIES</p>
+      <h2 class="section-title">主題分類</h2>
+      <p class="section-desc">選一個方向，看這條線上有什麼在動。</p>
+    </header>
+    <div class="tile-grid">
+      {% for tile in category_tiles %}
+      <a class="tile" href="{{ tile.url }}" style="--c: {{ tile.accent }}" data-reveal>
+        <span class="tile-top">
+          <span class="tile-name">{{ tile.name }}</span>
+          <span class="tile-count">{{ tile.count }}</span>
+        </span>
+        <span class="tile-desc">{{ tile.desc }}</span>
+        <span class="tile-foot">{{ tile.latest }}</span>
+      </a>
+      {% endfor %}
+    </div>
+  </div>
+</section>
